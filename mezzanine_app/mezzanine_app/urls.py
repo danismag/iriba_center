@@ -97,7 +97,7 @@ urlpatterns += [
 
     # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
 
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
